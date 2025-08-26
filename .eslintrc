@@ -12,6 +12,7 @@
   },
   "rules": {
     "camelcase": "off",
+    "linebreak-style": "off",
     "import/extensions": ["error", "always"],
     "jsx-a11y/label-has-associated-control": ["error", {
       "assert": "either"

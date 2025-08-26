@@ -137,6 +137,10 @@ class Parser extends Reader {
 
       const lookup = commandToTypeMapping[type];
       if (!lookup) {
+        // Skip DEM_Max (18) as it's a sentinel value, not a real command
+        if (type === EDemoCommands.DEM_Max) {
+          continue;
+        }
         throw new Error(`no type to handle demo command: ${type}`);
       }
       const [Type, as] = lookup;
